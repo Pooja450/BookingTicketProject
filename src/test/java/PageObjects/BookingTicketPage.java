@@ -17,7 +17,7 @@ WebDriver driver;
 	}
 	public void selectDeparturePlace() {
 		driver.findElement(By.xpath("//input[@id='fromCity']")).click();
-	    driver.findElement(By.xpath("//ul[@class='react-autosuggest__suggestions-list']//li[0]")).click();
+	    driver.findElement(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li[@id='react-autowhatever-1-section-0-item-0']")).click();
 	}
 	public void selectDestinationPlace() {
 		driver.findElement(By.xpath("//input[@id='toCity']")).click();
@@ -25,7 +25,7 @@ WebDriver driver;
 	}
 	public void selectDepartureDate() {
 		driver.findElement(By.xpath("//input[@id='departure']")).click();
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[1]/div[3]/div[3]/div[2]")).click();
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[1]/div[3]/div[3]/div[4]")).click();
 	}
 	public void selectReturnDate() {
 		driver.findElement(By.xpath("//input[@id='return']")).click();
@@ -33,8 +33,8 @@ WebDriver driver;
 	    
 	}
 	public void selectNumberOfTravellers() {
-		driver.findElement(By.xpath("//div[@class='fsw_inputBox flightTravllers inactiveWidget ']")).click();
-	    driver.findElement(By.xpath("//ul[@class='guestCounter font12 darkText//li[1]']")).click();
+		driver.findElement(By.xpath("//input[@id='travellers']")).click();
+	    driver.findElement(By.xpath("//ul[@class='guestCounter font12 darkText/li]")).click();
 	    driver.findElement(By.xpath("//button[@class='primaryBtn btnApply pushRight ']")).click();
 	}
 	public void clickToSearchFlight() {
@@ -50,7 +50,8 @@ WebDriver driver;
 		driver.findElement(By.xpath("//button[@id='bookbutton-RKEY:1ecb8495-f384-4471-95d8-bbd0e9b01df7:1~~~RKEY:1ecb8495-f384-4471-95d8-bbd0e9b01df7:85']")).click();	
 	}
 	public void clickContinue() {
-		driver.findElement(By.xpath("")).click();
+		driver.findElement(By.cssSelector("button.btn.fli_primary_btn")).click();
+				
 	}
 	public String bookReview() {
 		String Itenrary = driver.findElement(By.xpath("//p[@class='rvw-heading LatoBold']")).getText();
@@ -91,8 +92,7 @@ WebDriver driver;
 	public void clickSkip() {
 		driver.findElement(By.xpath("//a[@class='pull-left skip-add-ons']")).click();
 	}
-	public String paymentPage() {
-		String text = driver.findElement(By.xpath("//span[@class='make_pay lato-bold pull-left mb_m_t16']")).getText();
-		return text;
+	public String verifyPaymentPage() {
+		return driver.getTitle();
 	}
 }

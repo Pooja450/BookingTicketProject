@@ -137,7 +137,7 @@ public class BookingTicket extends TestIn {
 
 	@Then("Validate Payment Page")
 	public void validate_Payment_Page() {
-	    Assert.assertEquals(bookingticketpage.paymentPage(),"Use MyWallet");
+	    Assert.assertEquals(bookingticketpage.verifyPaymentPage(),"MakeMytrip Payment : Safe and Secure");
 	    
 	}
 
