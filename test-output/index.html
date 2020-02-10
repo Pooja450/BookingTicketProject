@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 5 failed,   </span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -110,22 +110,21 @@
                         <a href="#" panel-name="suite-Default_suite" title="Runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;ReviewBooking&quot;, &quot;Booking tickets for 2 persons&quot;)">runScenario("ReviewBooking", "Booking tickets for 2 persons")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Default_suite">
                       <span>
-                        <img src="failed.png" width="3%"/>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="Runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Select Places and Date for Booking Ticket&quot;, &quot;Booking tickets for 2 persons&quot;)">runScenario("Select Places and Date for Booking Ticket", "Booking tickets for 2 persons")</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;AddOns&quot;, &quot;Booking tickets for 2 persons&quot;)">runScenario("AddOns", "Booking tickets for 2 persons")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="Runners.TestRunner" class="method navigator-link" hash-for-method="runScenario(&quot;Entering Traveller Details&quot;, &quot;Booking tickets for 2 persons&quot;)">runScenario("Entering Traveller Details", "Booking tickets for 2 persons")</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Default_suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -149,59 +148,14 @@
                   </a> <!-- runScenario("Book Desired Flight", "Booking tickets for 2 persons") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("Book Desired Flight", "Booking tickets for 2 persons")</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: Could not create a cucumber expression for &apos;Enter Passenger FirstName {string name1}&apos;.
-It appears you did not register parameter type. The details are in the stacktrace below.
-You can find the documentation here: https://docs.cucumber.io/cucumber/cucumber-expressions/
-	at io.cucumber.stepexpression.StepExpressionFactory.registerTypeInConfiguration(StepExpressionFactory.java:93)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:65)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:54)
-	at cucumber.runtime.java.JavaStepDefinition.createExpression(JavaStepDefinition.java:44)
-	at cucumber.runtime.java.JavaStepDefinition.&lt;init&gt;(JavaStepDefinition.java:36)
-	at cucumber.runtime.java.JavaBackend.addStepDefinition(JavaBackend.java:146)
-	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:65)
-	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:42)
-	at cucumber.runtime.java.JavaBackend.loadGlue(JavaBackend.java:82)
-	at cucumber.runner.Runner.&lt;init&gt;(Runner.java:28)
-	at cucumber.runner.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:44)
-	at cucumber.runner.ThreadLocalRunnerSupplier.access$000(ThreadLocalRunnerSupplier.java:15)
-	at cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:24)
-	at cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:21)
-	at java.base/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:195)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-	at cucumber.runner.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
-	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:66)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: io.cucumber.cucumberexpressions.UndefinedParameterTypeException: Undefined parameter type {string name1}. Please register a ParameterType for {string name1}.
-	at io.cucumber.cucumberexpressions.CucumberExpression.processParameters(CucumberExpression.java:101)
-	at io.cucumber.cucumberexpressions.CucumberExpression.&lt;init&gt;(CucumberExpression.java:32)
-	at io.cucumber.cucumberexpressions.ExpressionFactory.createExpression(ExpressionFactory.java:45)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:63)
-	... 42 more
+                  <div class="stack-trace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at PageObjects.BookingTicketPage.verifybookingReviewPage(BookingTicketPage.java:66)
+	at StepD.BookingTicket.validate_BookingReview(BookingTicket.java:69)
+	at ✽.Validate BookingReview(src/test/resources/Features/BookingTicket.feature:17)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -214,254 +168,33 @@ Caused by: io.cucumber.cucumberexpressions.UndefinedParameterTypeException: Unde
                   </a> <!-- runScenario("ReviewBooking", "Booking tickets for 2 persons") -->
                   <span class="method-name">runScenario</span>
                   <span class="parameters">("ReviewBooking", "Booking tickets for 2 persons")</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: Could not create a cucumber expression for &apos;Enter Passenger FirstName {string name1}&apos;.
-It appears you did not register parameter type. The details are in the stacktrace below.
-You can find the documentation here: https://docs.cucumber.io/cucumber/cucumber-expressions/
-	at io.cucumber.stepexpression.StepExpressionFactory.registerTypeInConfiguration(StepExpressionFactory.java:93)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:65)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:54)
-	at cucumber.runtime.java.JavaStepDefinition.createExpression(JavaStepDefinition.java:44)
-	at cucumber.runtime.java.JavaStepDefinition.&lt;init&gt;(JavaStepDefinition.java:36)
-	at cucumber.runtime.java.JavaBackend.addStepDefinition(JavaBackend.java:146)
-	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:65)
-	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:42)
-	at cucumber.runtime.java.JavaBackend.loadGlue(JavaBackend.java:82)
-	at cucumber.runner.Runner.&lt;init&gt;(Runner.java:28)
-	at cucumber.runner.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:44)
-	at cucumber.runner.ThreadLocalRunnerSupplier.access$000(ThreadLocalRunnerSupplier.java:15)
-	at cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:24)
-	at cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:21)
-	at java.base/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:195)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-	at cucumber.runner.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
-	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:66)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: io.cucumber.cucumberexpressions.UndefinedParameterTypeException: Undefined parameter type {string name1}. Please register a ParameterType for {string name1}.
-	at io.cucumber.cucumberexpressions.CucumberExpression.processParameters(CucumberExpression.java:101)
-	at io.cucumber.cucumberexpressions.CucumberExpression.&lt;init&gt;(CucumberExpression.java:32)
-	at io.cucumber.cucumberexpressions.ExpressionFactory.createExpression(ExpressionFactory.java:45)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:63)
-	... 42 more
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Select Places and Date for Booking Ticket&quot;, &quot;Booking tickets for 2 persons&quot;)">
-                  </a> <!-- runScenario("Select Places and Date for Booking Ticket", "Booking tickets for 2 persons") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Select Places and Date for Booking Ticket", "Booking tickets for 2 persons")</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: Could not create a cucumber expression for &apos;Enter Passenger FirstName {string name1}&apos;.
-It appears you did not register parameter type. The details are in the stacktrace below.
-You can find the documentation here: https://docs.cucumber.io/cucumber/cucumber-expressions/
-	at io.cucumber.stepexpression.StepExpressionFactory.registerTypeInConfiguration(StepExpressionFactory.java:93)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:65)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:54)
-	at cucumber.runtime.java.JavaStepDefinition.createExpression(JavaStepDefinition.java:44)
-	at cucumber.runtime.java.JavaStepDefinition.&lt;init&gt;(JavaStepDefinition.java:36)
-	at cucumber.runtime.java.JavaBackend.addStepDefinition(JavaBackend.java:146)
-	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:65)
-	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:42)
-	at cucumber.runtime.java.JavaBackend.loadGlue(JavaBackend.java:82)
-	at cucumber.runner.Runner.&lt;init&gt;(Runner.java:28)
-	at cucumber.runner.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:44)
-	at cucumber.runner.ThreadLocalRunnerSupplier.access$000(ThreadLocalRunnerSupplier.java:15)
-	at cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:24)
-	at cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:21)
-	at java.base/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:195)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-	at cucumber.runner.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
-	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:66)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: io.cucumber.cucumberexpressions.UndefinedParameterTypeException: Undefined parameter type {string name1}. Please register a ParameterType for {string name1}.
-	at io.cucumber.cucumberexpressions.CucumberExpression.processParameters(CucumberExpression.java:101)
-	at io.cucumber.cucumberexpressions.CucumberExpression.&lt;init&gt;(CucumberExpression.java:32)
-	at io.cucumber.cucumberexpressions.ExpressionFactory.createExpression(ExpressionFactory.java:45)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:63)
-	... 42 more
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;AddOns&quot;, &quot;Booking tickets for 2 persons&quot;)">
-                  </a> <!-- runScenario("AddOns", "Booking tickets for 2 persons") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("AddOns", "Booking tickets for 2 persons")</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: Could not create a cucumber expression for &apos;Enter Passenger FirstName {string name1}&apos;.
-It appears you did not register parameter type. The details are in the stacktrace below.
-You can find the documentation here: https://docs.cucumber.io/cucumber/cucumber-expressions/
-	at io.cucumber.stepexpression.StepExpressionFactory.registerTypeInConfiguration(StepExpressionFactory.java:93)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:65)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:54)
-	at cucumber.runtime.java.JavaStepDefinition.createExpression(JavaStepDefinition.java:44)
-	at cucumber.runtime.java.JavaStepDefinition.&lt;init&gt;(JavaStepDefinition.java:36)
-	at cucumber.runtime.java.JavaBackend.addStepDefinition(JavaBackend.java:146)
-	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:65)
-	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:42)
-	at cucumber.runtime.java.JavaBackend.loadGlue(JavaBackend.java:82)
-	at cucumber.runner.Runner.&lt;init&gt;(Runner.java:28)
-	at cucumber.runner.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:44)
-	at cucumber.runner.ThreadLocalRunnerSupplier.access$000(ThreadLocalRunnerSupplier.java:15)
-	at cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:24)
-	at cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:21)
-	at java.base/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:195)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-	at cucumber.runner.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
-	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:66)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: io.cucumber.cucumberexpressions.UndefinedParameterTypeException: Undefined parameter type {string name1}. Please register a ParameterType for {string name1}.
-	at io.cucumber.cucumberexpressions.CucumberExpression.processParameters(CucumberExpression.java:101)
-	at io.cucumber.cucumberexpressions.CucumberExpression.&lt;init&gt;(CucumberExpression.java:32)
-	at io.cucumber.cucumberexpressions.ExpressionFactory.createExpression(ExpressionFactory.java:45)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:63)
-	... 42 more
-
-</div> <!-- stack-trace -->
-                  <em>
-(Runs Cucumber Scenarios)                  </em>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="runScenario(&quot;Entering Traveller Details&quot;, &quot;Booking tickets for 2 persons&quot;)">
-                  </a> <!-- runScenario("Entering Traveller Details", "Booking tickets for 2 persons") -->
-                  <span class="method-name">runScenario</span>
-                  <span class="parameters">("Entering Traveller Details", "Booking tickets for 2 persons")</span>
-                  <div class="stack-trace">cucumber.runtime.CucumberException: Could not create a cucumber expression for &apos;Enter Passenger FirstName {string name1}&apos;.
-It appears you did not register parameter type. The details are in the stacktrace below.
-You can find the documentation here: https://docs.cucumber.io/cucumber/cucumber-expressions/
-	at io.cucumber.stepexpression.StepExpressionFactory.registerTypeInConfiguration(StepExpressionFactory.java:93)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:65)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:54)
-	at cucumber.runtime.java.JavaStepDefinition.createExpression(JavaStepDefinition.java:44)
-	at cucumber.runtime.java.JavaStepDefinition.&lt;init&gt;(JavaStepDefinition.java:36)
-	at cucumber.runtime.java.JavaBackend.addStepDefinition(JavaBackend.java:146)
-	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:65)
-	at cucumber.runtime.java.MethodScanner.scan(MethodScanner.java:42)
-	at cucumber.runtime.java.JavaBackend.loadGlue(JavaBackend.java:82)
-	at cucumber.runner.Runner.&lt;init&gt;(Runner.java:28)
-	at cucumber.runner.ThreadLocalRunnerSupplier.createRunner(ThreadLocalRunnerSupplier.java:44)
-	at cucumber.runner.ThreadLocalRunnerSupplier.access$000(ThreadLocalRunnerSupplier.java:15)
-	at cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:24)
-	at cucumber.runner.ThreadLocalRunnerSupplier$1.initialValue(ThreadLocalRunnerSupplier.java:21)
-	at java.base/java.lang.ThreadLocal.setInitialValue(ThreadLocal.java:195)
-	at java.base/java.lang.ThreadLocal.get(ThreadLocal.java:172)
-	at cucumber.runner.ThreadLocalRunnerSupplier.get(ThreadLocalRunnerSupplier.java:40)
-	at cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:66)
-	at cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: io.cucumber.cucumberexpressions.UndefinedParameterTypeException: Undefined parameter type {string name1}. Please register a ParameterType for {string name1}.
-	at io.cucumber.cucumberexpressions.CucumberExpression.processParameters(CucumberExpression.java:101)
-	at io.cucumber.cucumberexpressions.CucumberExpression.&lt;init&gt;(CucumberExpression.java:32)
-	at io.cucumber.cucumberexpressions.ExpressionFactory.createExpression(ExpressionFactory.java:45)
-	at io.cucumber.stepexpression.StepExpressionFactory.createExpression(StepExpressionFactory.java:63)
-	... 42 more
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id=&apos;review-continue&apos;]&quot;}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Poojas-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:4:ba1e:6c88:2246%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;13.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/gv/mllqbt8534n...}, goog:chromeOptions: {debuggerAddress: localhost:51517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: bdd875562fb41985700285014c929f12
+*** Element info: {Using=xpath, value=//button[@id=&apos;review-continue&apos;]}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at PageObjects.BookingTicketPage.scrollToparticularWebElement(BookingTicketPage.java:72)
+	at StepD.BookingTicket.click_terms_condition(BookingTicket.java:74)
+	at ✽.Click terms&amp;condition(src/test/resources/Features/BookingTicket.feature:20)
 
 </div> <!-- stack-trace -->
                   <em>
@@ -470,10 +203,28 @@ Caused by: io.cucumber.cucumberexpressions.UndefinedParameterTypeException: Unde
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Runners.TestRunner</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="runScenario(&quot;Select Places and Date for Booking Ticket&quot;, &quot;Booking tickets for 2 persons&quot;)">
+                  </a> <!-- runScenario("Select Places and Date for Booking Ticket", "Booking tickets for 2 persons") -->
+                  <span class="method-name">runScenario</span>
+                  <span class="parameters">("Select Places and Date for Booking Ticket", "Booking tickets for 2 persons")</span>
+                  <em>
+(Runs Cucumber Scenarios)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/gv/mllqbt8534ncx84q92wgxcxr0000gn/T/testng-eclipse-1893339496/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/gv/mllqbt8534ncx84q92wgxcxr0000gn/T/testng-eclipse-568825107/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -530,32 +281,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'runScenario')
 data.setCell(0, 2, 'Runners.TestRunner')
-data.setCell(0, 3, 95);
+data.setCell(0, 3, 20100);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'runScenario')
 data.setCell(1, 2, 'Runners.TestRunner')
-data.setCell(1, 3, 13);
+data.setCell(1, 3, 11954);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'runScenario')
 data.setCell(2, 2, 'Runners.TestRunner')
-data.setCell(2, 3, 11);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'runScenario')
-data.setCell(3, 2, 'Runners.TestRunner')
-data.setCell(3, 3, 10);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'runScenario')
-data.setCell(4, 2, 'Runners.TestRunner')
-data.setCell(4, 3, 10);
+data.setCell(2, 3, 11600);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 139 ms</span>
+              <span class="suite-total-time">Total running time: 43 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -588,45 +331,31 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeclass</span>
-                <span class="method-start">154 ms</span>
+                <span class="method-start">140 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">runScenario("Select Places and Date for Booking Ticket", "Booking tickets for 2 persons")</span>
-                <span class="method-start">2270 ms</span>
+                <span class="method-start">1973 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("Book Desired Flight", "Booking tickets for 2 persons")</span>
-                <span class="method-start">2369 ms</span>
+                <span class="method-start">13928 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">runScenario("ReviewBooking", "Booking tickets for 2 persons")</span>
-                <span class="method-start">2385 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("Entering Traveller Details", "Booking tickets for 2 persons")</span>
-                <span class="method-start">2400 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">runScenario("AddOns", "Booking tickets for 2 persons")</span>
-                <span class="method-start">2413 ms</span>
+                <span class="method-start">25530 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterclass</span>
-                <span class="method-start">2428 ms</span>
+                <span class="method-start">45633 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">2431 ms</span>
+                <span class="method-start">45901 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

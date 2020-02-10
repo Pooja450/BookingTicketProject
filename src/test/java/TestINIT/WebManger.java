@@ -14,6 +14,7 @@ public class WebManger {
 	public static WebDriver getDriver() {
 		if(PropFileReader.getProp("config", "browser").equalsIgnoreCase("chrome")) {
 		System.setProperty("webdriver.chrome.driver", "//Users//poojabhandari//Desktop//SELENIUM_TRAINING//chromedriver");
+		// System.setProperty("webdriver.gecko.driver","//Users//poojabhandari//Desktop//SELENIUM_TRAINING//geckodriver");
 		driver = new ChromeDriver();
 		}
 		return driver;

@@ -11,7 +11,7 @@ public class PropFileReader {
 	static Properties prop;
 	
 	public static String getProp(String path, String property) {
-		String finalPath = "//Users//poojabhandari//Desktop//SELENIUM_TRAINING//AUTOMATION_code//TicketBooking//src//test//resources//PropertyFiles//"+path+".properties";
+		String finalPath = "src//test//resources//PropertyFiles//"+path+".properties";
 		try {
 			fis = new FileInputStream(finalPath);
 		} catch (FileNotFoundException e) {

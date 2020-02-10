@@ -1,2 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" time="0"/>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="43.556419">
+    <testcase classname="Booking tickets for 2 persons" name="Select Places and Date for Booking Ticket" time="11.862155">
+        <system-out>
+            <![CDATA[Given Launch MakeMyTrip URL.................................................passed
+When Enter Departure Place..................................................passed
+And Enter Destination Place.................................................passed
+And Select Departure Date...................................................passed
+And Select Return Date......................................................passed
+And Select No. of Travellers................................................passed
+And Click Search Button.....................................................passed
+Then Validate Search for Flights............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Booking tickets for 2 persons" name="Book Desired Flight" time="11.597501">
+        <failure message="java.lang.AssertionError: expected [true] but found [false]&#10;&#9;at org.testng.Assert.fail(Assert.java:96)&#10;&#9;at org.testng.Assert.failNotEquals(Assert.java:776)&#10;&#9;at org.testng.Assert.assertTrue(Assert.java:44)&#10;&#9;at org.testng.Assert.assertTrue(Assert.java:54)&#10;&#9;at PageObjects.BookingTicketPage.verifybookingReviewPage(BookingTicketPage.java:66)&#10;&#9;at StepD.BookingTicket.validate_BookingReview(BookingTicket.java:69)&#10;&#9;at ✽.Validate BookingReview(src/test/resources/Features/BookingTicket.feature:17)&#10;">
+            <![CDATA[When Select Flight..........................................................passed
+And Click BookNow...........................................................passed
+Then Validate BookingReview.................................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertTrue(Assert.java:44)
+	at org.testng.Assert.assertTrue(Assert.java:54)
+	at PageObjects.BookingTicketPage.verifybookingReviewPage(BookingTicketPage.java:66)
+	at StepD.BookingTicket.validate_BookingReview(BookingTicket.java:69)
+	at ✽.Validate BookingReview(src/test/resources/Features/BookingTicket.feature:17)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Booking tickets for 2 persons" name="ReviewBooking" time="20.096763">
+        <failure message="org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@id='review-continue']&quot;}&#10;  (Session info: chrome=79.0.3945.130)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'Poojas-MacBook-Pro.local', ip: 'fe80:0:0:0:4:ba1e:6c88:2246%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/gv/mllqbt8534n...}, goog:chromeOptions: {debuggerAddress: localhost:51517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}&#10;Session ID: bdd875562fb41985700285014c929f12&#10;*** Element info: {Using=xpath, value=//button[@id='review-continue']}&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#10;&#9;at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#10;&#9;at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#10;&#9;at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#10;&#9;at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#10;&#9;at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#10;&#9;at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)&#10;&#9;at org.openqa.selenium.By$ByXPath.findElement(By.java:353)&#10;&#9;at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#10;&#9;at PageObjects.BookingTicketPage.scrollToparticularWebElement(BookingTicketPage.java:72)&#10;&#9;at StepD.BookingTicket.click_terms_condition(BookingTicket.java:74)&#10;&#9;at ✽.Click terms&amp;condition(src/test/resources/Features/BookingTicket.feature:20)&#10;">
+            <![CDATA[When Click terms&condition..................................................failed
+And Click Continue Button...................................................skipped
+Then Validate Traveller & AdOns Page........................................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@id='review-continue']"}
+  (Session info: chrome=79.0.3945.130)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Poojas-MacBook-Pro.local', ip: 'fe80:0:0:0:4:ba1e:6c88:2246%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.13.6', java.version: '13.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/gv/mllqbt8534n...}, goog:chromeOptions: {debuggerAddress: localhost:51517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: bdd875562fb41985700285014c929f12
+*** Element info: {Using=xpath, value=//button[@id='review-continue']}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at PageObjects.BookingTicketPage.scrollToparticularWebElement(BookingTicketPage.java:72)
+	at StepD.BookingTicket.click_terms_condition(BookingTicket.java:74)
+	at ✽.Click terms&condition(src/test/resources/Features/BookingTicket.feature:20)
+]]>
+        </failure>
+    </testcase>
+</testsuite>

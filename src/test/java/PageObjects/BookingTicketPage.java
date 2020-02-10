@@ -1,8 +1,10 @@
 package PageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class BookingTicketPage {
 
@@ -20,16 +22,17 @@ WebDriver driver;
 	    driver.findElement(By.xpath("//ul[@class='react-autosuggest__suggestions-list']/li[@id='react-autowhatever-1-section-0-item-0']")).click();
 	}
 	public void selectDestinationPlace() {
-		driver.findElement(By.xpath("//input[@id='toCity']")).click();
-	    driver.findElement(By.xpath("//li[@id='react-autowhatever-1-section-0-item-0']")).click();
+		driver.findElement(By.xpath("//div[@id='react-autowhatever-1']//li[@id='react-autowhatever-1-section-0-item-1']")).click();
 	}
 	public void selectDepartureDate() {
-		driver.findElement(By.xpath("//input[@id='departure']")).click();
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[1]/div[3]/div[3]/div[4]")).click();
+		// driver.findElement(By.xpath("//input[@id='departure']")).click();
+		driver.findElement(By.xpath("//div[@aria-label ='Fri Feb 14 2020']")).click();
+	    // driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[2]/div[3]/div[1]/div[1]")).click();
+	    // driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[1]/div[3]/div[3]/div[5]")).click();	
 	}
 	public void selectReturnDate() {
-		driver.findElement(By.xpath("//input[@id='return']")).click();
-	    driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[2]/div[3]/div[1]/div[1]/div")).click();
+		driver.findElement(By.xpath("//div[@class='fsw_inputBox dates reDates inactiveWidget ']")).click();
+	   driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[2]/div[3]/div[1]/div[1]/div")).click();
 	    
 	}
 	public void selectNumberOfTravellers() {
@@ -40,34 +43,50 @@ WebDriver driver;
 	public void clickToSearchFlight() {
 		driver.findElement(By.xpath("//a[@class='primaryBtn font24 latoBlack widgetSearchBtn ']")).click();
 	}
-	public String verifyFlightSearchPage() {
-		return driver.findElement(By.xpath("//button[@id='bookbutton-RKEY:36c913e9-96f9-43df-9a29-a5388e612c26:52_0~~~RKEY:36c913e9-96f9-43df-9a29-a5388e612c26:125_0']")).getText();
+	public boolean verifyFlightSearchPage() {
+		String flightsearchurl = driver.getCurrentUrl();
+		Assert.assertTrue(flightsearchurl.contains("www.makemytrip.com/flight/search?itinerary"));
+		return true;
 	}
 	public void selectDesiredFlight() {
-		driver.findElement(By.xpath("//div[@class='fli-list splitVw-listing active']")).click();
+		driver.findElement(By.xpath("//*[@id=\"rt-domrt-jrny\"]/div/div[2]")).click();
+		// driver.findElement(By.xpath("//*[@id=\"rt-domrt-jrny\"]/div/div[6]")).click();
 	}
-	public void clickBookNow() {
-		driver.findElement(By.xpath("//button[@id='bookbutton-RKEY:1ecb8495-f384-4471-95d8-bbd0e9b01df7:1~~~RKEY:1ecb8495-f384-4471-95d8-bbd0e9b01df7:85']")).click();	
-	}
+	
 	public void clickContinue() {
-		driver.findElement(By.cssSelector("button.btn.fli_primary_btn")).click();
-				
+		driver.findElement(By.xpath("//button[@id='review-continue']")).click();
+		// For skip :   driver.findElement(By.xpath("//span[@class='font14 text-blue LatoBold cursor_pointer']")).click();
 	}
-	public String bookReview() {
-		String Itenrary = driver.findElement(By.xpath("//p[@class='rvw-heading LatoBold']")).getText();
-		return Itenrary;
+	
+	public void clickBookNow() {
+		driver.findElement(By.xpath("//div[@class='splitVw-footer-total make_relative make_flex alC']//div[@class='pull-left make_flex alC']")).click();
+		}
+	public boolean verifybookingReviewPage() {
+		String itineraryurl = driver.getCurrentUrl();
+		Assert.assertTrue(itineraryurl.contains("www.makemytrip.com/flight/review/?itineraryId"));
+		return true;
+	} 
+	
+	public void scrollToparticularWebElement() {
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].scrolllnto?View();",driver.findElement(By.xpath("//button[@id='review-continue']")));
+      // jse.executeScript("arguments[0].scrolllnto?View();",driver.findElement(By.xpath("//*[@id=\"insurance-section\"]/div/div[3]/label[1]/input"));
+		
 	}
-	public void acceptTerms() {
+	
+	public void acceptTerms() {  
 		driver.findElement(By.xpath("//*[@id=\"insurance-section\"]/div/div[3]/label[1]/input")).click();
+		//driver.findElement(By.xpath("//label[@class='block radio append_bottom15']/input[value='yes']")).click();
 	}
 	public void clickOnContinue() {
 		driver.findElement(By.xpath("//button[@id='review-continue']")).click();
+		// For Skip :   driver.findElement(By.xpath("//span[@class='font14 text-blue LatoBold cursor_pointer']")).click();
 	}
 	public String AdOnsPage() {
 		return driver.findElement(By.xpath("//div[class='make_flex alC']")).getText();
 	}
 	
-	public void clickOnAddAdult() {
+	/* public void clickOnAddAdult() {
 		driver.findElement(By.xpath("//a[@class='font14 LatoBold text-uppercase paddLR15']")).click();
 	}
 	
@@ -95,4 +114,5 @@ WebDriver driver;
 	public String verifyPaymentPage() {
 		return driver.getTitle();
 	}
+	*/
 }

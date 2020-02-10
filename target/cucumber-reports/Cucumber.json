@@ -1,1 +1,279 @@
-[]
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1213661,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.before(Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Select Places and Date for Booking Ticket",
+        "description": "",
+        "id": "booking-tickets-for-2-persons;select-places-and-date-for-booking-ticket",
+        "after": [
+          {
+            "result": {
+              "duration": 276972,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5885324162,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "Launch MakeMyTrip URL",
+            "match": {
+              "location": "BookingTicket.launch_MakeMyTrip_URL()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 311355877,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Enter Departure Place",
+            "match": {
+              "location": "BookingTicket.enter_Departure_Place()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 261117205,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Enter Destination Place",
+            "match": {
+              "location": "BookingTicket.enter_Destination_Place()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 90933821,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Select Departure Date",
+            "match": {
+              "location": "BookingTicket.select_Departure_Date()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 235626504,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Select Return Date",
+            "match": {
+              "location": "BookingTicket.select_Return_Date()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 462959,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Select No. of Travellers",
+            "match": {
+              "location": "BookingTicket.select_No_of_Travellers()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5050700609,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Click Search Button",
+            "match": {
+              "location": "BookingTicket.click_Search_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6349812,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Validate Search for Flights",
+            "match": {
+              "location": "BookingTicket.validate_Search_for_Flights()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 424468,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.before(Scenario)"
+            }
+          }
+        ],
+        "line": 14,
+        "name": "Book Desired Flight",
+        "description": "",
+        "id": "booking-tickets-for-2-persons;book-desired-flight",
+        "after": [
+          {
+            "result": {
+              "duration": 613707,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1946108465,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Select Flight",
+            "match": {
+              "location": "BookingTicket.select_Flight()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 8805416922,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "Click BookNow",
+            "match": {
+              "location": "BookingTicket.click_BookNow()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.AssertionError: expected [true] but found [false]\n\tat org.testng.Assert.fail(Assert.java:96)\n\tat org.testng.Assert.failNotEquals(Assert.java:776)\n\tat org.testng.Assert.assertTrue(Assert.java:44)\n\tat org.testng.Assert.assertTrue(Assert.java:54)\n\tat PageObjects.BookingTicketPage.verifybookingReviewPage(BookingTicketPage.java:66)\n\tat StepD.BookingTicket.validate_BookingReview(BookingTicket.java:69)\n\tat ✽.Validate BookingReview(src/test/resources/Features/BookingTicket.feature:17)\n",
+              "duration": 837338445,
+              "status": "failed"
+            },
+            "line": 17,
+            "name": "Validate BookingReview",
+            "match": {
+              "location": "BookingTicket.validate_BookingReview()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 484362,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.before(Scenario)"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "ReviewBooking",
+        "description": "",
+        "id": "booking-tickets-for-2-persons;reviewbooking",
+        "after": [
+          {
+            "result": {
+              "duration": 261595,
+              "status": "passed"
+            },
+            "match": {
+              "location": "hooks.after()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//button[@id\u003d\u0027review-continue\u0027]\"}\n  (Session info: chrome\u003d79.0.3945.130)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Poojas-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:4:ba1e:6c88:2246%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.13.6\u0027, java.version: \u002713.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/gv/mllqbt8534n...}, goog:chromeOptions: {debuggerAddress: localhost:51517}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: bdd875562fb41985700285014c929f12\n*** Element info: {Using\u003dxpath, value\u003d//button[@id\u003d\u0027review-continue\u0027]}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat PageObjects.BookingTicketPage.scrollToparticularWebElement(BookingTicketPage.java:72)\n\tat StepD.BookingTicket.click_terms_condition(BookingTicket.java:74)\n\tat ✽.Click terms\u0026condition(src/test/resources/Features/BookingTicket.feature:20)\n",
+              "duration": 20093013073,
+              "status": "failed"
+            },
+            "line": 20,
+            "name": "Click terms\u0026condition",
+            "match": {
+              "location": "BookingTicket.click_terms_condition()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 314405,
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "Click Continue Button",
+            "match": {
+              "location": "BookingTicket.click_Continue_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 204051,
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "Validate Traveller \u0026 AdOns Page",
+            "match": {
+              "location": "BookingTicket.validate_Traveller_AdOns_Page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Booking tickets for 2 persons",
+    "description": "",
+    "id": "booking-tickets-for-2-persons",
+    "keyword": "Feature",
+    "uri": "src/test/resources/Features/BookingTicket.feature",
+    "tags": []
+  }
+]
