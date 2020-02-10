@@ -10,19 +10,19 @@ import cucumber.api.java.en.When;
 
 public class BookingTicket extends TestIn {
 
-	@Given("Launch MakeMyTrip URL")
-	public void launch_MakeMyTrip_URL() {
-		bookingticketpage.launchUrl();
+	@Given("Launch MakeMyTrip URL {string}")
+	public void launch_MakeMyTrip_URL(String url) {
+		bookingticketpage.launchUrl(url);
 	}
 
-	@When("Enter Departure Place")
-	public void enter_Departure_Place() {
-		bookingticketpage.selectDeparturePlace();
+	@When("Enter Departure Place {string}")
+	public void enter_Departure_Place(String dep) {
+		bookingticketpage.enterDeparturePlace(dep);
 	}
 
-	@When("Enter Destination Place")
-	public void enter_Destination_Place() {
-	bookingticketpage.selectDestinationPlace();
+	@When("Enter Destination Place {string}")
+	public void enter_Destination_Place(String des) {
+	bookingticketpage.enterDestinationPlace(des);
 	}
 
 	@When("Select Departure Date")
@@ -125,5 +125,5 @@ public class BookingTicket extends TestIn {
 	public void validate_Payment_Page() {
 	    Assert.assertEquals(bookingticketpage.verifyPaymentPage(),"MakeMytrip Payment : Safe and Secure");
 	 } 
-	 */
+	*/ 
 }
