@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 1425070,
+              "duration": 1492019,
               "status": "passed"
             },
             "match": {
@@ -14,14 +14,14 @@
             }
           }
         ],
-        "line": 4,
-        "name": "Select Places and Date for Booking Ticket",
+        "line": 43,
+        "name": "Payment Page",
         "description": "",
-        "id": "booking-tickets-for-2-persons;select-places-and-date-for-booking-ticket",
+        "id": "booking-tickets-for-2-persons;payment-page",
         "after": [
           {
             "result": {
-              "duration": 307959,
+              "duration": 341633,
               "status": "passed"
             },
             "match": {
@@ -34,10 +34,10 @@
         "steps": [
           {
             "result": {
-              "duration": 16930666164,
+              "duration": 2654552160,
               "status": "passed"
             },
-            "line": 5,
+            "line": 44,
             "name": "Launch MakeMyTrip URL \"https://www.makemytrip.com/\"",
             "match": {
               "arguments": [
@@ -52,10 +52,10 @@
           },
           {
             "result": {
-              "duration": 476694432,
+              "duration": 340779780,
               "status": "passed"
             },
-            "line": 6,
+            "line": 45,
             "name": "Enter Departure Place \"Mumbai\"",
             "match": {
               "arguments": [
@@ -70,15 +70,15 @@
           },
           {
             "result": {
-              "duration": 644525825,
+              "duration": 237891821,
               "status": "passed"
             },
-            "line": 7,
-            "name": "Enter Destination Place \"Goa\"",
+            "line": 46,
+            "name": "Enter Destination Place \"Delhi\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"Goa\"",
+                  "val": "\"Delhi\"",
                   "offset": 24
                 }
               ],
@@ -88,10 +88,10 @@
           },
           {
             "result": {
-              "duration": 199105564,
+              "duration": 89872623,
               "status": "passed"
             },
-            "line": 8,
+            "line": 47,
             "name": "Select Departure Date",
             "match": {
               "location": "BookingTicket.select_Departure_Date()"
@@ -100,10 +100,10 @@
           },
           {
             "result": {
-              "duration": 321222843,
+              "duration": 214960995,
               "status": "passed"
             },
-            "line": 9,
+            "line": 48,
             "name": "Select Return Date",
             "match": {
               "location": "BookingTicket.select_Return_Date()"
@@ -112,10 +112,10 @@
           },
           {
             "result": {
-              "duration": 343381,
+              "duration": 305582497,
               "status": "passed"
             },
-            "line": 10,
+            "line": 49,
             "name": "Select No. of Travellers",
             "match": {
               "location": "BookingTicket.select_No_of_Travellers()"
@@ -124,10 +124,10 @@
           },
           {
             "result": {
-              "duration": 19815126367,
+              "duration": 29344983891,
               "status": "passed"
             },
-            "line": 11,
+            "line": 50,
             "name": "Click Search Button",
             "match": {
               "location": "BookingTicket.click_Search_Button()"
@@ -136,54 +136,10 @@
           },
           {
             "result": {
-              "duration": 6650387,
+              "duration": 5107335283,
               "status": "passed"
             },
-            "line": 12,
-            "name": "Validate Search for Flights",
-            "match": {
-              "location": "BookingTicket.validate_Search_for_Flights()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 260969,
-              "status": "passed"
-            },
-            "match": {
-              "location": "hooks.before(Scenario)"
-            }
-          }
-        ],
-        "line": 14,
-        "name": "Book Desired Flight",
-        "description": "",
-        "id": "booking-tickets-for-2-persons;book-desired-flight",
-        "after": [
-          {
-            "result": {
-              "duration": 230996,
-              "status": "passed"
-            },
-            "match": {
-              "location": "hooks.after()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 183495186,
-              "status": "passed"
-            },
-            "line": 15,
+            "line": 51,
             "name": "Select Flight",
             "match": {
               "location": "BookingTicket.select_Flight()"
@@ -192,11 +148,10 @@
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element \u003cdiv class\u003d\"pull-left make_flex alC\" style\u003d\"position: relative;\"\u003e...\u003c/div\u003e is not clickable at point (1247, 604). Other element would receive the click: \u003cdiv class\u003d\"OverlayGreyBg\"\u003e\u003c/div\u003e\n  (Session info: chrome\u003d79.0.3945.130)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Poojas-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:4:ba1e:6c88:2246%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.13.6\u0027, java.version: \u002713.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/gv/mllqbt8534n...}, goog:chromeOptions: {debuggerAddress: localhost:59286}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: f5ac5377611275eedf33094b429f3025\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\n\tat PageObjects.BookingTicketPage.clickBookNow(BookingTicketPage.java:81)\n\tat StepD.BookingTicket.click_BookNow(BookingTicket.java:61)\n\tat ✽.Click BookNow(src/test/resources/Features/BookingTicket.feature:16)\n",
-              "duration": 1138017510,
-              "status": "failed"
+              "duration": 5176547080,
+              "status": "passed"
             },
-            "line": 16,
+            "line": 52,
             "name": "Click BookNow",
             "match": {
               "location": "BookingTicket.click_BookNow()"
@@ -205,55 +160,10 @@
           },
           {
             "result": {
-              "duration": 392625,
-              "status": "skipped"
-            },
-            "line": 17,
-            "name": "Validate BookingReview",
-            "match": {
-              "location": "BookingTicket.validate_BookingReview()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      },
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 645685,
+              "duration": 9207135123,
               "status": "passed"
             },
-            "match": {
-              "location": "hooks.before(Scenario)"
-            }
-          }
-        ],
-        "line": 19,
-        "name": "ReviewBooking",
-        "description": "",
-        "id": "booking-tickets-for-2-persons;reviewbooking",
-        "after": [
-          {
-            "result": {
-              "duration": 427852,
-              "status": "passed"
-            },
-            "match": {
-              "location": "hooks.after()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "error_message": "org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id\u003d\\\"insurance-section\\\"]/div/div[3]/label[1]/input (tried for 20 second(s) with 500 milliseconds interval)\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)\n\tat PageObjects.BookingTicketPage.scrollToparticularWebElement(BookingTicketPage.java:97)\n\tat StepD.BookingTicket.click_terms_condition(BookingTicket.java:74)\n\tat ✽.Click terms\u0026condition(src/test/resources/Features/BookingTicket.feature:20)\nCaused by: org.openqa.selenium.NoSuchWindowException: no such window: window was already closed\n  (Session info: chrome\u003d79.0.3945.130)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Poojas-MacBook-Pro.local\u0027, ip: \u0027fe80:0:0:0:4:ba1e:6c88:2246%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.13.6\u0027, java.version: \u002713.0.1\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.130, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/gv/mllqbt8534n...}, goog:chromeOptions: {debuggerAddress: localhost:59286}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: f5ac5377611275eedf33094b429f3025\n*** Element info: {Using\u003dxpath, value\u003d//*[@id\u003d\\\"insurance-section\\\"]/div/div[3]/label[1]/input}\n\tat jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)\n\tat org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)\n\tat PageObjects.BookingTicketPage.scrollToparticularWebElement(BookingTicketPage.java:97)\n\tat StepD.BookingTicket.click_terms_condition(BookingTicket.java:74)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat cucumber.runtime.Utils$1.call(Utils.java:26)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:20)\n\tat cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:49)\n\tat cucumber.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:50)\n\tat cucumber.runner.TestStep.executeStep(TestStep.java:63)\n\tat cucumber.runner.TestStep.run(TestStep.java:49)\n\tat cucumber.runner.PickleStepTestStep.run(PickleStepTestStep.java:43)\n\tat cucumber.runner.TestCase.run(TestCase.java:44)\n\tat cucumber.runner.Runner.runPickle(Runner.java:40)\n\tat cucumber.api.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:68)\n\tat cucumber.api.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:22)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:567)\n\tat org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:583)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:648)\n\tat org.testng.TestRunner.run(TestRunner.java:505)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:455)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:364)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1137)\n\tat org.testng.TestNG.runSuites(TestNG.java:1049)\n\tat org.testng.TestNG.run(TestNG.java:1017)\n\tat org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)\n\tat org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)\n\tat org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)\n",
-              "duration": 20143283204,
-              "status": "failed"
-            },
-            "line": 20,
+            "line": 53,
             "name": "Click terms\u0026condition",
             "match": {
               "location": "BookingTicket.click_terms_condition()"
@@ -262,10 +172,10 @@
           },
           {
             "result": {
-              "duration": 635231,
-              "status": "skipped"
+              "duration": 6131238241,
+              "status": "passed"
             },
-            "line": 21,
+            "line": 54,
             "name": "Click Continue Button",
             "match": {
               "location": "BookingTicket.click_Continue_Button()"
@@ -274,15 +184,176 @@
           },
           {
             "result": {
-              "duration": 425127,
-              "status": "skipped"
+              "duration": 357604673,
+              "status": "passed"
             },
-            "line": 22,
-            "name": "Validate Traveller \u0026 AdOns Page",
+            "line": 55,
+            "name": "Enter Passenger FirstName \"Pooja\"",
             "match": {
-              "location": "BookingTicket.validate_Traveller_AdOns_Page()"
+              "arguments": [
+                {
+                  "val": "\"Pooja\"",
+                  "offset": 26
+                }
+              ],
+              "location": "BookingTicket.enter_Passenger_FirstName(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 105872204,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "Enter Passenger LastName \"Bhandari\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Bhandari\"",
+                  "offset": 25
+                }
+              ],
+              "location": "BookingTicket.enter_Passenger_LastName(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 159584331,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "Click On Gender",
+            "match": {
+              "location": "BookingTicket.click_On_Gender()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 364929385,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "Enter SecondPassenger FirstName \"Manni\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Manni\"",
+                  "offset": 32
+                }
+              ],
+              "location": "BookingTicket.enter_SecondPassenger_FirstName(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 102111370,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "Enter SecondPassenger LastName \"Negi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Negi\"",
+                  "offset": 31
+                }
+              ],
+              "location": "BookingTicket.enter_SecondPassenger_LastName(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 142799190,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "Click On SecondPassengerGender",
+            "match": {
+              "location": "BookingTicket.click_On_SecondPassengerGender()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 114937871,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "Enter ContactNo \"8527326880\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"8527326880\"",
+                  "offset": 16
+                }
+              ],
+              "location": "BookingTicket.enter_ContactNo(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 166044317,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "Enter EmailId \"pooja100389@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"pooja100389@gmail.com\"",
+                  "offset": 14
+                }
+              ],
+              "location": "BookingTicket.enter_EmailId(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6186788891,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "Click Continue Button",
+            "match": {
+              "location": "BookingTicket.click_Continue_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 373320618,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "Click Skip AdOns Button",
+            "match": {
+              "location": "BookingTicket.click_Skip_AdOns_Button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 5925043,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "Validate Payment Page",
+            "match": {
+              "location": "BookingTicket.validate_Payment_Page()"
             },
             "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Test2"
           }
         ]
       }

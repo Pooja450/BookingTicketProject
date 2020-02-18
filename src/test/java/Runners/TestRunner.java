@@ -15,7 +15,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		
 		features = "src/test/resources/Features", 
 		glue = { "StepD" }, 
-		// tags = {"@Ticket"}, 
+		tags = {"@Test2"}, 
 		plugin = { "pretty", "html:target/cucumber-reports", "junit:target/cucumber-reports/Cucumber.xml",
 	     "json:target/cucumber-reports/Cucumber.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" }, 
 		// plugin = {"pretty", "html:target/report/"},
@@ -31,7 +31,7 @@ public class TestRunner extends AbstractTestNGCucumberTests{
 	@BeforeClass
 	public void beforeclass() {
 		TestIn.init();
-		report = ExtentManager.setUp("//Users//poojabhandari//Desktop//SELENIUM_TRAINING//AUTOMATION_code//TicketBooking//target");
+		report = ExtentManager.setUp("target");
 	} 
 	
 	@AfterClass
