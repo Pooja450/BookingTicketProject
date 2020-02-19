@@ -25,14 +25,14 @@ public class BookingTicket extends TestIn {
 	bookingticketpage.enterDestinationPlace(des);
 	}
 
-	@When("Select Departure Date")
-	public void select_Departure_Date() {
-		bookingticketpage.selectDepartureDate();
+	@When("Select Departure Date {string}")
+	public void select_Departure_Date(String d1) {
+		bookingticketpage.selectDepartureDate(d1);
 	}
 
-	@When("Select Return Date")
-	public void select_Return_Date() {
-	    bookingticketpage.selectReturnDate();
+	@When("Select Return Date {string}")
+	public void select_Return_Date(String d2) {
+	    bookingticketpage.selectReturnDate(d2);
     }
 
 	@When("Select No. of Travellers")

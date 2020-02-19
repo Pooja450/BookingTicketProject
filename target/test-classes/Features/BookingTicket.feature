@@ -5,8 +5,8 @@ Scenario: Select Places and Date for Booking Ticket
 Given Launch MakeMyTrip URL "https://www.makemytrip.com/"
 When Enter Departure Place "Mumbai"
 And Enter Destination Place "Delhi"
-And Select Departure Date
-And Select Return Date
+And Select Departure Date "Feb-25-2020"
+And Select Return Date "Mar-02-2020"
 And Select No. of Travellers
 And Click Search Button
 Then Validate Search for Flights
@@ -16,8 +16,8 @@ Scenario: Book Desired Flight
 Given Launch MakeMyTrip URL "https://www.makemytrip.com/"
 When Enter Departure Place "Mumbai"
 And Enter Destination Place "Delhi"
-And Select Departure Date
-And Select Return Date
+And Select Departure Date "Feb-25-2020"
+And Select Return Date "Mar-02-2020"
 And Select No. of Travellers
 And Click Search Button
 When Select Flight
@@ -29,9 +29,9 @@ Scenario: ReviewBooking
 Given Launch MakeMyTrip URL "https://www.makemytrip.com/"
 When Enter Departure Place "Mumbai"
 And Enter Destination Place "Delhi"
-And Select Departure Date
-And Select Return Date
-And Select No. of Travellers
+And Select Departure Date "Feb-25-2020"
+And Select Return Date "Mar-02-2020"
+And Select No. of Travellers 
 And Click Search Button
 When Select Flight
 And Click BookNow
@@ -44,8 +44,8 @@ Scenario:Payment Page
 Given Launch MakeMyTrip URL "https://www.makemytrip.com/"
 When Enter Departure Place "Mumbai"
 And Enter Destination Place "Delhi"
-And Select Departure Date
-And Select Return Date
+And Select Departure Date "Feb-25-2020"
+And Select Return Date "Mar-02-2020"
 And Select No. of Travellers
 And Click Search Button
 When Select Flight

@@ -1,5 +1,6 @@
 package PageObjects;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -45,13 +46,47 @@ WebDriver driver;
 	        }
 	}
 	
-	public void selectDepartureDate() {
-		driver.findElement(By.xpath("//div[contains(@class,'today')]")).click();
+	public void selectDepartureDate(String dep) {
+		// driver.findElement(By.xpath("//div[contains(@class,'today')]")).click();
+		/*String splitter[]=dep.split("-");
+		String Departmonth = splitter[0];
+		System.out.println("month" + " " + Departmonth);
+        String Departdate = splitter[1];
+        System.out.println("date" + " " + Departdate);
+        String Departyear = splitter[2];
+        System.out.println("year" + " " + Departyear);
+        */
+        WebElement cal = driver.findElement(By.xpath("//div[@class='DayPicker-Month']"));
+        List<WebElement> rows= cal.findElements(By.xpath("//div[@class='DayPicker-Week']"));	
+        for(int i =0;i<=rows.size()-1;i++){
+        List<WebElement> columns=rows.get(i).findElements(By.xpath("//div[contains(@class,'DayPicker-Day')]"));
+        Iterator itr = columns.iterator();
+
+
+        while(itr.hasNext()){
+
+            WebElement e=(WebElement) itr.next();
+
+            if(e.getText().contains(dep)){
+               e.click();
+                break;
+
+              }
+
+            
+          }
+	  }
 	}
-	public void selectReturnDate() {
-	   driver.findElement(By.xpath("//div[@class='fsw_inputBox dates reDates inactiveWidget ']")).click();
-	   driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div/div[2]/div[1]/div[3]/div[1]/div/div/div/div[2]/div/div[2]/div[2]/div[3]/div[1]/div[1]/div")).click();
-	    
+	public void selectReturnDate(String ret) {
+		 
+		driver.findElement(By.xpath("//div[@class='fsw_inputBox dates reDates inactiveWidget ']")).click();
+		String splitter[]=ret.split("-");
+		String Returnmonth = splitter[0];
+		System.out.println("month" + " " + Returnmonth);
+        String Returndate = splitter[1];
+        System.out.println("date" + " " + Returndate);
+        String Returnyear = splitter[2];
+        System.out.println("year" + " " + Returnyear);
 	}
 	public void selectNumberOfTravellers() {
 		driver.findElement(By.xpath("//*[@id='root']/div/div[2]/div/div/div[2]/div[1]/div[5]")).click();
